@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import BlogImage from './BlogImage';
 import Select from 'react-select';
+import ComponentToImg from './ComponentToImg';
 const BlogConfig = () => {
     const [title, setTitle] = useState("How I built my first project with react");
     const [author, setAuthor] = useState("Aman Thukral");
     const [bgColor, setBgColor] = useState("#8B5CF6")
     const [icons, setIcons] = useState({});
     const [icon, setIcon] = useState({'label': 'react', 'value': 'react'})
+    const [downloadAs, setDownloadAs] = useState("PNG")
 
     const getIcons = async () => {
         const response = await fetch('https://raw.githubusercontent.com/devicons/devicon/master/devicon.json');
@@ -47,13 +49,22 @@ const BlogConfig = () => {
                     onChange={(e) => {
                         setIcon(e);
                     }}
-
-                >
-
-                </Select>
+                />
+                <div>
+                    <h6>Download As</h6>
+                    <select
+                        onChange={(e) => setDownloadAs(e.target.value)}
+                        value={downloadAs}
+                    >
+                        <option>PNG</option>
+                        <option>JPEG</option>
+                    </select>
+                </div>
             </div>
             <div className="">
-                <BlogImage title={title} author={author} bgColor={bgColor} icon={icon}/>
+                <ComponentToImg downloadAs={downloadAs} >
+                    <BlogImage title={title} author={author} bgColor={bgColor} icon={icon}/>
+                </ComponentToImg>
             </div>
         </div>
     )
