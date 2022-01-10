@@ -10,6 +10,15 @@ const BlogConfig = () => {
     const [icon, setIcon] = useState({'label': 'react', 'value': 'react'})
     const [downloadAs, setDownloadAs] = useState("PNG")
 
+    const reset = () => {
+        setTitle('How I built my first project with react')
+        setAuthor('Aman Thukral')
+        setBgColor('#8B5CF6')
+        setIcons({})
+        setIcon({'label': 'react', 'value': 'react'})
+        setDownloadAs('PNG')
+    }
+
     const getIcons = async () => {
         const response = await fetch('https://raw.githubusercontent.com/devicons/devicon/master/devicon.json');
         const data = await response.json();
@@ -60,6 +69,7 @@ const BlogConfig = () => {
                         <option>JPEG</option>
                     </select>
                 </div>
+                <button onClick={() => reset()}>Reset</button>
             </div>
             <div className="">
                 <ComponentToImg downloadAs={downloadAs} >
