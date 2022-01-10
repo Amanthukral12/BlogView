@@ -21,12 +21,30 @@ const BlogConfig = () => {
     return (
         <div className="flex md:flex-row flex-col text-black bg-gray-100 h-full">
             <div className="md:w-2/5 bg-white">
-                form
+                <input type="text"
+                    placeholder='Enter title here'
+                    onChange={(e) => {
+                        setTitle(e.target.value)
+                    }} />
+                    <input type="text"
+                    placeholder='Enter author here'
+                    onChange={(e) => {
+                        setAuthor(e.target.value)
+                    }} />
+                <div>
+                    <h6>Background</h6>
+                    <span>Color</span>
+                    <input type="color"
+                    value={bgColor}
+                    onChange={(e) => {
+                        setBgColor(e.target.value)
+                    }} />
+                </div>
+                <h6>Dev Icon</h6>
                 <Select
                     value={icon}
                     options={icons}
                     onChange={(e) => {
-                        console.log(e)
                         setIcon(e);
                     }}
 
