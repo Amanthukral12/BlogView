@@ -92,14 +92,14 @@ const BlogConfig = () => {
                         <option>JPEG</option>
                     </select>
                 </div>
-                <div className='mx-52'>
+                <div className=' flex justify-center '>
                 <button
                  onClick={() => reset()}
                  className='bg-purple-500 text-white font-semibold w-28 py-1 rounded shadow-lg'
                  >Reset</button>
                  </div>
             </div>
-            <div className="bg-gray-100 h-full">
+            <div className="bg-gray-100 h-full px-24 py-16 rounded-lg">
                 <ComponentToImg downloadAs={downloadAs} >
                     <BlogImage title={title} author={author} bgColor={bgColor} icon={icon}/>
                 </ComponentToImg>
