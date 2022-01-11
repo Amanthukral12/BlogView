@@ -4,7 +4,7 @@ import Navbar from "./Navbar/Navbar"
 function App() {
 
   return (
-    <div className="text-white h-screen">
+    <div className="text-white flex flex-col h-screen bg-gray-100">
      <Navbar />
      <BlogConfig />
     </div>
