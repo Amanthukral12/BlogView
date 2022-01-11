@@ -14,7 +14,6 @@ const BlogConfig = () => {
         setTitle('How I built my first project with react')
         setAuthor('Aman Thukral')
         setBgColor('#8B5CF6')
-        setIcons({})
         setIcon({'label': 'react', 'value': 'react'})
         setDownloadAs('PNG')
     }
