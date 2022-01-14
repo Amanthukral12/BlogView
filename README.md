@@ -3,6 +3,8 @@
 💻Creating cover images for your
 blogs is now super easy.
 
+![Blogview App View](https://user-images.githubusercontent.com/47064923/149499378-fbcc808b-d02a-486a-991f-74db2b55aa5c.jpg)
+
 Built with React, Vite and TailwindCSS
 
 ```shell
