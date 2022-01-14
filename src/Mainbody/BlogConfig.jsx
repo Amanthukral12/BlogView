@@ -29,8 +29,8 @@ const BlogConfig = () => {
     },[])
 
     return (
-        <div className="flex md:flex-row flex-col text-black bg-gray-100 h-screen">
-            <div className="w-full md:w-2/5 bg-white">
+        <div className="flex xl:flex-row flex-col text-black bg-gray-100 h-screen">
+            <div className="w-full xl:w-2/5 bg-white">
                 <h6 className='mt-8 ml-8 font-medium text-gray-500 mb-8'>💻 Creating cover images for your<br /> 
                 <span className='ml-8'>blogs is now super easy</span></h6>
                 <div className='border-2 border-gray-200 w-11/12 ml-auto mr-auto rounded mt-2 mb-1'>
@@ -94,11 +94,11 @@ const BlogConfig = () => {
                 <div className=' flex justify-center '>
                 <button
                  onClick={() => reset()}
-                 className='bg-purple-500 text-white font-semibold w-28 py-1 rounded shadow-lg'
+                 className='bg-purple-500 text-white font-semibold w-28 py-1 rounded shadow-lg mb-3'
                  >Reset</button>
                  </div>
             </div>
-            <div className="bg-gray-100 h-full w-full p-2 md:px-24 md:py-16 rounded-lg">
+            <div className="bg-gray-100 h-full w-full p-2 lg:px-24 lg:py-16 rounded-lg">
                 <ComponentToImg downloadAs={downloadAs} >
                     <BlogImage title={title} author={author} bgColor={bgColor} icon={icon}/>
                 </ComponentToImg>
