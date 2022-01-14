@@ -35,6 +35,7 @@ const BlogConfig = () => {
                 <span className='ml-8'>blogs is now super easy</span></h6>
                 <div className='border-2 border-gray-200 w-11/12 ml-auto mr-auto rounded mt-2 mb-1'>
                     <input type="text"
+                        
                         placeholder='Enter title here'  
                         onChange={(e) => {
                             setTitle(e.target.value)
@@ -45,6 +46,7 @@ const BlogConfig = () => {
                 </div>
                 <div className='border-2 border-gray-200 w-11/12 ml-auto mr-auto rounded mt-1'>
                     <input type="text"
+                    
                     placeholder='Enter Author here'
                     onChange={(e) => {
                         setAuthor(e.target.value)
@@ -99,7 +101,7 @@ const BlogConfig = () => {
                  </div>
             </div>
             <div className="bg-gray-100 h-full w-full p-2 lg:px-24 lg:py-16 rounded-lg">
-                <ComponentToImg downloadAs={downloadAs} >
+                <ComponentToImg downloadAs={downloadAs} title={title} author={author} >
                     <BlogImage title={title} author={author} bgColor={bgColor} icon={icon}/>
                 </ComponentToImg>
             </div>
